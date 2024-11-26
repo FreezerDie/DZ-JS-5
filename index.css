@@ -1,0 +1,57 @@
+/* Задание 1 */
+
+.task-1 {
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+}
+
+.input-label {
+  display: block;
+}
+
+.input-form input {
+  width: 275px;
+}
+
+/* Задание 2 */
+
+.modal-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+}
+
+/* Задание 3 */
+
+.modal-content {
+  width: 450px;
+  height: 130px;
+  align-items: center;
+  text-align: center;
+  background-color: paleturquoise;
+  padding: 32px;
+}
+
+.modal-content h2 {
+  padding-bottom: 20px;
+}
+
+.modal-content button {
+  width: 200px;
+}
+
+.task-2 {
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+}
+
+/* Задание 4 */

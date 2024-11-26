@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- Задание 1 
+     Создать html-страницу для ввода имени пользователя. 
+     Необходимо проверять каждый символ, который вводит пользователь. 
+     Если он ввел цифру, то не отображать ее в input. -->
+
+    <div class="task-1">
+      <h2>Задание 1</h2>
+      <form class="input-form">
+        <label class="input-label">
+          Enter your name (name can't contain digits):
+        </label>
+        <input
+          class="input-name"
+          name="name"
+          type="text"
+          placeholder="your name"
+        />
+      </form>
+    </div>
+
+    <!-- Задание 2 
+    Создать html-страницу с кнопкой Открыть и модальным окном. 
+    На модальном окне должен быть текст и кнопка Закрыть. 
+    Изначально модальное окно не отображается. 
+    При клике на кнопку Открыть появляется модальное окно, 
+    на кнопку Закрыть – исчезает.  -->
+    <div class="task-2">
+      <h2>Задание 2</h2>
+      <button class="modal_open-btn">Open modal</button>
+    </div>
+    <div class="modal-background">
+      <div class="modal-content">
+        <h2>Hello from modal</h2>
+        <button class="modal_close-btn">Close</button>
+      </div>
+    </div>
+
+    <!-- Задание 3 
+    Создать html-страницу с футбольным полем, 
+    которое занимает всю ширину и высоту экрана, 
+    и мячом размером 100 на 100 пикселей. 
+    Сделать так, чтобы при клике мышкой по полю, 
+    мяч плавно перемещался на место клика. Учтите: 
+    необходимо, чтобы центр мяча останавливался именно там, 
+    где был совершен клик мышкой. Также предусмотрите, 
+    чтобы мяч не выходил за границы поля. -->
+
+    <script src="./index.js"></script>
+  </body>
+</html>
