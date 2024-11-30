@@ -46,3 +46,71 @@ modalCloseBtn.addEventListener("click", () => {
 // необходимо, чтобы центр мяча останавливался именно там,
 // где был совершен клик мышкой. Также предусмотрите,
 // чтобы мяч не выходил за границы поля.
+
+const field = document.querySelector(".field");
+
+const ball = document.querySelector(".ball");
+
+field.addEventListener("click", (event) => {
+  const x = event.clientX;
+  const y = event.clientY;
+
+  // console.log("x = ", x, " y = ", y);
+
+  ball.style.left = `${x - 27}px`;
+  ball.style.top = `${y - 27}px`;
+});
+
+// Задание 4
+//  Создать html-страницу со светофором и кнопкой,
+// которая переключает светофор на следующий цвет.
+
+const redLight = document.querySelector(".red_light");
+const yellowLight = document.querySelector(".yellow_light");
+const greenLight = document.querySelector(".green_light");
+
+let currentColor = "red";
+redLight.style.backgroundColor = "red";
+
+const lightBtn = document.querySelector(".traffic_light-btn");
+
+const changeLight = () => {
+  if (currentColor == "red") {
+    currentColor = "yellow";
+    redLight.style.backgroundColor = "#333";
+    yellowLight.style.backgroundColor = "yellow";
+  } else if (currentColor == "yellow") {
+    currentColor = "green";
+    yellowLight.style.backgroundColor = "#333";
+    greenLight.style.backgroundColor = "green";
+  } else if (currentColor == "green") {
+    currentColor = "red";
+    greenLight.style.backgroundColor = "#333";
+    redLight.style.backgroundColor = "red";
+  }
+};
+
+lightBtn.addEventListener("click", changeLight);
+
+// Задание 5
+// Создать html-страницу со списком книг.
+// При щелчке на книгу, цвет фона должен меняться на оранжевый.
+// Учтите, что при повторном щелчке на другую книгу,
+// предыдущей – необходимо возвращать прежний цвет.
+
+const booksList = document.querySelector(".books-list");
+
+let currentTarget;
+
+booksList.addEventListener("click", (event) => {
+  if (currentTarget == undefined) {
+    currentTarget = event.target.id;
+    document.querySelector(`#${currentTarget}`).style.backgroundColor =
+      "orange";
+  } else {
+    document.querySelector(`#${currentTarget}`).style.backgroundColor = "white";
+    currentTarget = event.target.id;
+    document.querySelector(`#${currentTarget}`).style.backgroundColor =
+      "orange";
+  }
+});
